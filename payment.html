@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Payment - Kanguva Movie Ticket Offer</title>
+    <style>
+        /* General Body Styling with Movie-Themed Background */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('background2.jpg'); /* Path to your movie theme background */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        /* Overlay to Darken Background for Text Readability */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity for desired effect */
+            z-index: 1;
+        }
+        .container {
+            position: relative;
+            max-width: 700px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(34, 34, 34, 0.9); /* Semi-transparent background */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+            z-index: 2;
+        }
+        /* Heading Styles */
+        .payment-title {
+            font-size: 2.8em;
+            color: #ffd700;
+            font-weight: bold;
+            text-shadow: 2px 2px #ff5733;
+            margin-top: 10px;
+        }
+        .steps-title {
+            font-size: 1.8em;
+            color: #ffd700;
+            font-weight: bold;
+            text-shadow: 1px 1px #ff5733;
+            margin: 25px 0 10px;
+        }
+        /* Description Text Styling */
+        .description {
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #f2f2f2;
+            margin: 20px 0;
+        }
+        .payment-section {
+            font-size: 1.1em;
+            color: #ddd;
+            padding: 15px 0;
+        }
+        /* Payment Button Styling */
+        .payment-button {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            background-color: #ff5733;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+        .payment-button:hover {
+            background-color: #ff3311;
+            transform: scale(1.05);
+        }
+        .qr-code {
+            margin-top: 30px;
+            display: none; /* Hidden by default, will show after successful payment */
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <!-- Payment Title -->
+        <div class="payment-title">Complete Your Payment</div>
+
+        <!-- Instructions for Payment -->
+        <div class="description">
+            To complete your booking, please pay Rs. 1 via UPI. After successful payment, a unique QR code will appear that you can scan to get your exclusive discount code.
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-section">
+            <p>Scan the QR Code below to pay Rs. 1:</p>
+            <div>
+                <img src="upi-qr-code.png" alt="UPI QR Code" style="width: 200px; height: 200px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);">
+            </div>
+
+            <p>After completing the payment, click the button below to confirm your payment.</p>
+
+            <!-- Button to Confirm Payment -->
+            <button class="payment-button" onclick="showQRCode()">Confirm Payment</button>
+        </div>
+
+        <!-- Hidden QR Code for Discount (Visible after payment confirmation) -->
+        <div class="qr-code" id="qrCodeSection">
+            <p>You can now scan the below QR code to get an exclusive discount code:</p>
+            <img src="" alt="Discount QR Code" style="width: 200px; height: 200px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);" id="discountQR">
+        </div>
+    </div>
+
+    <script>
+        // Function to show QR Code after payment confirmation
+        function showQRCode() {
+            // Randomly select a QR code image (qr1.png to qr5.png)
+            var randomQR = Math.floor(Math.random() * 5) + 1;
+            document.getElementById('discountQR').src = 'qr' + randomQR + '.png'; // Set the image source
+            document.getElementById('qrCodeSection').style.display = 'block';
+            alert('Payment confirmed! QR Code for your exclusive discount is now visible.');
+        }
+    </script>
+</body>
+</html>

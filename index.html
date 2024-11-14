@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanguva Movie Ticket Offer - Up to 100% OFF</title>
+    <style>
+        /* General Body Styling with Movie-Themed Background */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('background.jpg'); /* Path to your movie theme background */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        /* Overlay to Darken Background for Text Readability */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity for desired effect */
+            z-index: 1;
+        }
+        .container {
+            position: relative;
+            max-width: 700px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(34, 34, 34, 0.9); /* Semi-transparent background */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+            z-index: 2;
+        }
+        /* Poster Image Styling */
+        .poster img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+        }
+        /* Heading Styles */
+        .offer-title {
+            font-size: 2.8em;
+            color: #ffd700;
+            font-weight: bold;
+            text-shadow: 2px 2px #ff5733;
+            margin-top: 10px;
+        }
+        .limited-time {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff3333;
+            animation: flash 1.2s infinite;
+            margin-top: 5px;
+        }
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        /* Description Text Styling */
+        .description {
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #f2f2f2;
+            margin: 20px 0;
+        }
+        /* How-to Section Styling */
+        .steps-title {
+            font-size: 1.8em;
+            color: #ffd700;
+            font-weight: bold;
+            text-shadow: 1px 1px #ff5733;
+            margin: 25px 0 10px;
+        }
+        .steps {
+            text-align: left;
+            font-size: 1.1em;
+            color: #ddd;
+            padding: 0 15px;
+        }
+        /* Button Styling */
+        .book-button, .pay-now-button {
+            display: inline-block;
+            font-size: 1.5em;
+            padding: 15px 30px;
+            background-color: #ff5733;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+        .book-button:hover, .pay-now-button:hover {
+            background-color: #ff3311;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <!-- Movie Poster Section -->
+        <div class="poster">
+            <img src="movie-poster.jpg" alt="Kanguva Movie Poster">
+        </div>
+
+        <!-- Promotional Offer Title -->
+        <div class="offer-title">Get Up to 100% OFF on Kanguva Movie Tickets!</div>
+
+        <!-- Flashing Limited Time Offer Text -->
+        <div class="limited-time">Limited Time Offer!</div>
+
+        <!-- Offer Description -->
+        <div class="description">
+            Enjoy an exclusive deal with up to 100% discount on Kanguva movie tickets! This limited-time offer is available for a short period only. Don't miss out – book now and experience the thrill of Kanguva on the big screen. Hurry, the clock is ticking!
+        </div>
+
+        <!-- How to Avail the Offer Section -->
+        <div class="steps-title">How to Avail the Offer:</div>
+        <div class="steps">
+            <p>1. To avail the discount code, you first need to pay a nominal fee of Rs.1.</p>
+            <p>2. After successful payment, you will be redirected back to the page with a unique QR code.</p>
+            <p>3. Scan the QR code to get your exclusive discount code.</p>
+            <p>4. Use the discount code on <b>BookMyShow</b> to book your tickets with up to 100% discount.</p>
+            <p>5. Enjoy the movie with an incredible discount!</p>
+        </div>
+
+        <!-- Payment Button -->
+        <a href="payment.html" class="pay-now-button">Pay Rs.1 Now</a>
+
+    </div>
+</body>
+</html>
